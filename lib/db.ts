@@ -42,3 +42,20 @@ export async function get_settings_data() {
   const result = await db.select("SELECT * FROM settings");
   return result;
 }
+
+import { neon } from "@neondatabase/serverless";
+
+const sql = neon(
+  "postgresql://neondb_owner:npg_USfzM8Rrb9uV@ep-frosty-field-aprssidz-pooler.c-7.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require",
+  {
+    disableWarningInBrowsers: true,
+  },
+);
+
+export async function getposts() {
+  const posts = await sql`SELECT * FROM testdb`;
+  return posts;
+}
+
+// See https://neon.com/docs/serverless/serverless-driver
+// for more information

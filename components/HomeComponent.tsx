@@ -13,15 +13,15 @@ const pages = [
     },
     {
         href: "/Database",
-        name: "Database"
+        name: "local Database"
     },
     {
         href: "/settings",
         name: "settings"
     },
     {
-        href:"/videocall",
-        name: "video call"
+        href:"/Neondb",
+        name: "Neon db (serverless)"
     }
 
 ]
